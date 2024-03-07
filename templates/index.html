@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <title>Employee Attrition Prediction</title>
+</head>
+<body style="overflow: scroll;">
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        {% if label %}
+                            <h3>{{ label }}</h3>
+                        {% endif %}
+                        <h3>Employee Attrition Prediction</h3>
+                        <p>Fill in the details below below.</p>
+                        <form class="requires-validation" action="/" method="post" enctype="multipart/form-data">
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="age" name="age">
+                                    <option selected>Age</option>
+                                    {% for option in age %}
+                                        <option value="{{ option }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="dept" name="dept">
+                                    <option selected>Department</option>
+                                    {% for option in department %}
+                                        <option value="{{ department.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="distance" name="distance">
+                                    <option selected>Distance from Home</option>
+                                    {% for option in distance %}
+                                        <option value="{{ option }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="education" name="education">
+                                    <option selected>Education</option>
+                                    {% for option in education %}
+                                        <option value="{{ education.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="field" name="field">
+                                    <option selected>Field</option>
+                                    {% for option in field %}
+                                        <option value="{{ field.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="env_sat" name="env_sat">
+                                    <option selected>Environment Satisfaction</option>
+                                    {% for option in env_sat %}
+                                        <option value="{{ env_sat.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="job_sat" name="job_sat">
+                                    <option selected>Job Satsifaction</option>
+                                    {% for option in job_sat %}
+                                        <option value="{{ job_sat.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="mar_stat" name="mar_stat">
+                                    <option selected>Marital Status</option>
+                                    {% for option in mar_stat %}
+                                        <option value="{{ mar_stat.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" id="income" name="income" aria-describedby="basic-addon3" placeholder="Monthly Income">
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="no_com" name="no_com">
+                                    <option selected>Number of companies worked before</option>
+                                    {% for option in no_com %}
+                                        <option value="{{ option }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="work_life_balance" name="work_life_balance">
+                                    <option selected>Work Life Balance</option>
+                                    {% for option in work_life_balance %}
+                                        <option value="{{ work_life_balance.index(option) }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select" aria-label="Default select example" id="years_of_service" name="years_of_service">
+                                    <option selected>Years of service at company</option>
+                                    {% for option in years_of_service %}
+                                        <option value="{{ option }}">{{ option }}</option>
+                                    {% endfor %}
+                                  </select>
+                                  <br><br>
+                                </div>
+                                <button type="submit" class="btn btn-success" >Submit</button>
+                            
+
+                        </form>
+                        <br><br>
+                        <div class="container">
+                            {% if prediction %}
+                            <p>Predicted Price is {{ prediction }} Euros</p>
+                            {% endif %}
+                        </div>
+                        <br><br>
+                        <div style="margin-left: 20px;">
+                        <p>Mady By: Khan Faisal</p>
+                        <a href="https://khanfaisal.netlify.app" class="nav-link px-2 text-muted">Portfolio</a>
+                        ><a href="https://www.linkedin.com/in/khanfaisal79960" class="nav-link px-2 text-muted">Linkedin</a>
+                        ><a href="https://github.com/khanfaisal79960" class="nav-link px-2 text-muted">Github</a>
+                        ><a href="https://medium.com/@khanfaisal79960" class="nav-link px-2 text-muted">Medium</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</body>
+</html>
