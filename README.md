@@ -6,7 +6,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://employee-attrition-lp67.onrender.com/](https://employee-attrition-lp67.onrender.com/)
+[https://employee-attrition.replit.app/](https://employee-attrition.replit.app/)
 
 <h2>Project Screenshots:</h2>
 
