@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://socialify.git.ci/khanfaisal79960/employee-attrition/image?description=1&descriptionEditable=A%20Predictive%20Analysis%20of%20Employee%20Attrition&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Light" alt="project-image"></p>
 
-<p id="description">In the dynamic landscape of organizational management understanding and mitigating employee attrition is paramount. This project employs advanced predictive analytics to anticipate workforce changes providing valuable insights into the factors influencing employee turnover. By leveraging data-driven models and machine learning algorithms we aim to forecast attrition risks enabling proactive HR strategies for talent retention. This endeavor seeks to empower businesses with the foresight needed to cultivate a stable and engaged workforce fostering a resilient and thriving organizational culture.</p>
+<p id="description">The Employee Attrition Prediction project aims to develop a machine learning model that predicts the likelihood of employee attrition within an organization. By analyzing historical employee data and various factors contributing to attrition, the model helps HR departments and management identify at-risk employees and take proactive measures to retain valuable talent.</p>
 
 <h2>🚀 Demo</h2>
 
